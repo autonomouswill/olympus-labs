@@ -136,7 +136,7 @@ const App = () => {
       </nav>
       <div className="flex h-screen overflow-hidden">
           <div className="relative flex flex-col flex-1 py-12">
-            <Card value={rebaseRewardAmount.toFixed(2)}/>
+            <Card value={(Number(rebaseRewardAmount).toFixed(2)).toString()}/>
           </div>
       </div>    
     </div>
