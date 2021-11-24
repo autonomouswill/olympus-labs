@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, request
 from flask_cors import CORS
 import dailyprofits
 
@@ -8,6 +8,7 @@ cors = CORS(app)
 
 @app.route('/dailyprofit/', methods=['POST'])
 def get_daily_profits():
+    print(request.json)
     return dailyprofits.dailyProfits()
 
 
