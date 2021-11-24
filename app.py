@@ -6,7 +6,7 @@ app = Flask(__name__, static_folder='client/build', static_url_path='')
 cors = CORS(app)
 
 
-@app.route('/dailyprofit/', methods=['POST'])
+@app.route('/dailyprofit/')
 def get_daily_profits():
     return dailyprofits.dailyProfits()
 
