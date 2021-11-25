@@ -121,12 +121,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <Sidebar sidebarOpen={true} />
+      <Sidebar sidebarOpen={true}/>
       <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
         </div>
-        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-          <div class="text-sm lg:flex-grow">
+        <div class="w-full block flex-grow md:flex md:items-center md:w-auto">
+          <div class="text-sm md:flex-grow">
           </div>
           <div>
           {currentAccount === "" ? renderNotConnectedContainer() : ConnectedContainer()}
