@@ -40,9 +40,7 @@ function Card(props) {
         </div>
         <div class="flex-grow flex-1 px-6 py-6 text-grey-darker items-center -mx-4">
         </div>
-        {console.log("props: ")}
-        {console.log(props.value)}
-        {props.value === "" ? renderConnectWallet() : renderProfit()}
+        {renderProfit()}
         <div class="flex-grow flex px-6 py-10"/>
         <div class="flex-grow flex px-6 py-5"/>
       </div>
