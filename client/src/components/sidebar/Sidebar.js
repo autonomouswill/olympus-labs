@@ -6,7 +6,6 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
     <div className={sidebarOpen ? "sidebar_responsive h-full opacity-80 drop-shadow-xl" : ""} id="sidebar">
       <div className="sidebar__title">
         <div className="sidebar__img">
-          {/* <img alt="logo" src={logo} class="transform scale-50"/> */}
           <h1>Ω Olympus Labs</h1>
         </div>
         <i
@@ -19,7 +18,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
       <div className="sidebar__menu text-left">
         <div className="sidebar__link active_menu_link">
           <i className="fa fa-home"></i>
-          <a href="#">Daily Income</a>
+          <a href="#">Estimated Profit</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-building-o"></i>
