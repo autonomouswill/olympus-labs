@@ -1,6 +1,8 @@
 __pycache__/
 venv/
 .env
+.DS_Store
+Procfile
 
 client/node_modules/
 client/build/
