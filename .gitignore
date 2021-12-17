@@ -5,4 +5,3 @@ venv/
 Procfile
 
 client/node_modules/
-client/build/
