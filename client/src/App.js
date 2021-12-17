@@ -1,8 +1,12 @@
+import React, { useEffect, useState } from "react";
 import './styles/App.css';
 import Sidebar from "./components/sidebar/Sidebar";
 import Card from './components/card/Card';
 import { ethers } from "ethers";
-import React, { useEffect, useState } from "react";
+const CoinGecko = require('coingecko-api');
+
+
+const CoinGeckoClient = new CoinGecko();
 
 const App = () => {
     const [currentAccount, setCurrentAccount] = useState("");
@@ -35,17 +39,8 @@ const App = () => {
 
   const getCurrentPrice = async() => {
     console.log("fetching price..")
-    const response = await fetch('//olympus-labs.herokuapp.com/', {
-      method: "POST",
-      headers: {
-      'Content-Type' : 'application/json'
-      },
-      body: JSON.stringify()
-    }).then(res => res.json()).then(data => {
-      setPrice(data.result);
-    }).catch(error => {
-      console.log(error);
-    });
+    let data = await CoinGeckoClient.coins.fetch('olympus', {});
+    setPrice(data['data']['market_data']['current_price']['usd']);
   }
 
   const loadsOhmBalance = async (provider) => {
