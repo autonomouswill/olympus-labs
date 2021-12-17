@@ -5,7 +5,6 @@ import Card from './components/card/Card';
 import { ethers } from "ethers";
 const CoinGecko = require('coingecko-api');
 
-
 const CoinGeckoClient = new CoinGecko();
 
 const App = () => {
